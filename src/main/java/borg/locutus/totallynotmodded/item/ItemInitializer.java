@@ -1,4 +1,4 @@
-package borg.locutus.totallynotmodded.items;
+package borg.locutus.totallynotmodded.item;
 
 import borg.locutus.totallynotmodded.TotallyNotModdedMod;
 import net.minecraft.world.item.Item;

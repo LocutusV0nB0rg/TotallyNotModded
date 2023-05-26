@@ -1,5 +1,7 @@
 {
   "item.totallynotmodded.tnm_items": "Totally not modded items",
 
-  "item.totallynotmodded.aquamarine": "Aquamarine"
+  "item.totallynotmodded.aquamarine": "Aquamarine",
+
+  "block.totallynotmodded.aquamarine_ore": "Aquamarine Ore"
 }

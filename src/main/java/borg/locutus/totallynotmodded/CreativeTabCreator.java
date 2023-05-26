@@ -24,16 +24,8 @@ public class CreativeTabCreator {
                         .displayItems((params, output) -> {
                             output.accept(ItemInitializer.AQUAMARINE_ITEM.get());
                             output.accept(new ItemStack(BlockInitializer.AQUAMARINE_ORE.get()).copyWithCount(1));
+                            output.accept(new ItemStack(BlockInitializer.AQUAMARINE_BLOCK.get()).copyWithCount(1));
                         })
         );
     }
-
-    /*@SubscribeEvent
-    public static void addCreative(CreativeModeTabEvent.BuildContents event)
-    {
-        if (event.getTab() == CreativeModeTabRegistry.getTab(new ResourceLocation("tnm_items"))) {
-            event.accept(ItemInitializer.AQUAMARINE_ITEM);
-            event.accept(BlockInitializer.AQUAMARINE_ORE);
-        }
-    }*/
 }

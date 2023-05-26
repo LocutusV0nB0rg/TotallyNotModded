@@ -21,6 +21,8 @@ public class BlockInitializer {
 
     public static final RegistryObject<Block> AQUAMARINE_ORE = registerBlock("aquamarine_ore", () ->
             new DropExperienceBlock(BlockBehaviour.Properties.of(Material.METAL).strength(6f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)));
+    public static final RegistryObject<Block> AQUAMARINE_BLOCK = registerBlock("aquamarine_block", () ->
+            new Block(BlockBehaviour.Properties.of(Material.METAL).strength(6f).requiresCorrectToolForDrops()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

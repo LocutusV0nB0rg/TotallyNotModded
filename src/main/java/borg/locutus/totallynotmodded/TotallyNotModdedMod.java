@@ -30,17 +30,12 @@ import org.slf4j.Logger;
 @Mod(TotallyNotModdedMod.MODID)
 public class TotallyNotModdedMod
 {
-    // Define mod id in a common place for everything to reference
     public static final String MODID = "totallynotmodded";
-    // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
 
     public TotallyNotModdedMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ItemInitializer.BLOCKS.register(modEventBus);
         ItemInitializer.ITEMS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in

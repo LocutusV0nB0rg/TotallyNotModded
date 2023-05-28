@@ -17,7 +17,7 @@ public class Fastcart extends AbstractMinecart {
         super(p_38470_, p_38471_);
     }
     public Fastcart(Level p_38473_, double p_38474_, double p_38475_, double p_38476_) {
-        super(EntityType.MINECART, p_38473_, p_38474_, p_38475_, p_38476_);
+        super(FastcartEntityTypeProvider.FASTCART, p_38473_, p_38474_, p_38475_, p_38476_);
     }
 
     public @NotNull InteractionResult interact(@NotNull Player player, @NotNull InteractionHand interactionHand) {

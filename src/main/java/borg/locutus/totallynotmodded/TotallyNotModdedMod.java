@@ -33,6 +33,6 @@ public class TotallyNotModdedMod
     }
 
     private void registerFastcartRenderer() {
-        EntityRenderers.register(EntityType.MINECART, (p_174070_) -> new FastcartRenderer<>(p_174070_, ModelLayers.MINECART));
+        EntityRenderers.register(FastcartEntityTypeProvider.FASTCART, (p_174070_) -> new FastcartRenderer<>(p_174070_, ModelLayers.MINECART));
     }
 }

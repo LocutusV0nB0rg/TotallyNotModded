@@ -24,7 +24,7 @@ public class EntityRendererRegisterListener {
 
 
     @SubscribeEvent
-    public void register(RegisterEvent event) {
+    public static void register(RegisterEvent event) {
         FASTCART_ENTITY_TYPE =
                 EntityType.Builder.<Fastcart>of(Fastcart::new, MobCategory.MISC).sized(0.98F, 0.7F).clientTrackingRange(8).build("fastcart");
 

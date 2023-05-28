@@ -1,7 +1,6 @@
 package borg.locutus.totallynotmodded;
 
 import borg.locutus.totallynotmodded.block.BlockInitializer;
-import borg.locutus.totallynotmodded.entity.EntityInitializer;
 import borg.locutus.totallynotmodded.item.ItemInitializer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;

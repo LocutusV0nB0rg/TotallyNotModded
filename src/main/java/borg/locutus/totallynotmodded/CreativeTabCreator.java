@@ -19,12 +19,13 @@ public class CreativeTabCreator {
                 // Set name of tab to display
                 builder.title(Component.translatable("item." + TotallyNotModdedMod.MODID + ".tnm_items"))
                         // Set icon of creative tab
-                        .icon(() -> new ItemStack(ItemInitializer.AQUAMARINE_ITEM.get()))
+                        .icon(() -> new ItemStack(ItemInitializer.FASTCART_ITEM.get()))
                         // Add default items to tab
                         .displayItems((params, output) -> {
                             output.accept(ItemInitializer.AQUAMARINE_ITEM.get());
                             output.accept(new ItemStack(BlockInitializer.AQUAMARINE_ORE.get()).copyWithCount(1));
                             output.accept(new ItemStack(BlockInitializer.AQUAMARINE_BLOCK.get()).copyWithCount(1));
+                            output.accept(ItemInitializer.FASTCART_ITEM.get());
                         })
         );
     }

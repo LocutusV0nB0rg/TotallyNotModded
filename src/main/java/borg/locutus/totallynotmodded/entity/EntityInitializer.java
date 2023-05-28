@@ -13,8 +13,7 @@ public class EntityInitializer {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, TotallyNotModdedMod.MODID);
 
-    public static final RegistryObject<EntityType<? extends AbstractMinecart>> FASTCART_ENTITY = ENTITY_TYPES.register(
-            "fastcart",
-            () -> EntityType.Builder.<Fastcart>of(Fastcart::new, MobCategory.MISC).sized(0.98F, 0.7F).clientTrackingRange(8).build("fastcart"));
+    public static final EntityType<? extends AbstractMinecart> FASTCART_ENTITY_TYPE =
+            EntityType.Builder.<Fastcart>of(Fastcart::new, MobCategory.MISC).sized(0.98F, 0.7F).clientTrackingRange(8).build("fastcart");
 
 }

@@ -1,7 +1,13 @@
 package borg.locutus.totallynotmodded;
 
 import borg.locutus.totallynotmodded.block.BlockInitializer;
+import borg.locutus.totallynotmodded.entity.FastcartEntityTypeProvider;
+import borg.locutus.totallynotmodded.entity.FastcartRenderer;
 import borg.locutus.totallynotmodded.item.ItemInitializer;
+import net.minecraft.client.model.geom.ModelLayers;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.MinecartRenderer;
+import net.minecraft.world.entity.EntityType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -22,5 +28,11 @@ public class TotallyNotModdedMod
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(CreativeTabCreator.class);
+
+        registerFastcartRenderer();
+    }
+
+    private void registerFastcartRenderer() {
+        EntityRenderers.register(EntityType.MINECART, (p_174070_) -> new FastcartRenderer<>(p_174070_, ModelLayers.MINECART));
     }
 }

@@ -8,19 +8,19 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.vehicle.AbstractMinecart;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 
 public class Fastcart extends AbstractMinecart {
     public Fastcart(EntityType<?> p_38470_, Level p_38471_) {
         super(p_38470_, p_38471_);
     }
-
     public Fastcart(Level p_38473_, double p_38474_, double p_38475_, double p_38476_) {
         super(EntityType.MINECART, p_38473_, p_38474_, p_38475_, p_38476_);
     }
 
-    public InteractionResult interact(Player player, InteractionHand interactionHand) {
+    public @NotNull InteractionResult interact(@NotNull Player player, @NotNull InteractionHand interactionHand) {
         InteractionResult ret = super.interact(player, interactionHand);
         if (ret.consumesAction()) return ret;
         if (player.isSecondaryUseActive()) {
@@ -34,7 +34,7 @@ public class Fastcart extends AbstractMinecart {
         }
     }
 
-    protected Item getDropItem() {
+    protected @NotNull Item getDropItem() {
         return ItemInitializer.FASTCART_ITEM.get();
     }
 
@@ -54,7 +54,44 @@ public class Fastcart extends AbstractMinecart {
 
     }
 
-    public AbstractMinecart.Type getMinecartType() {
-        return AbstractMinecart.Type.RIDEABLE;
+    @Override
+    public Type getMinecartType() {
+        return null;
+    }
+
+
+    @Override
+    public ItemStack getPickResult() {
+        return new ItemStack(ItemInitializer.FASTCART_ITEM.get());
+    }
+
+    @Override
+    protected double getMaxSpeed() {
+        return 2f;
+    }
+
+    @Override
+    protected float getBlockSpeedFactor() {
+        return 2f;
+    }
+
+    @Override
+    public float getMaxCartSpeedOnRail() {
+        return 2f;
+    }
+
+    @Override
+    public float getCurrentCartSpeedCapOnRail() {
+        return 2f;
+    }
+
+    @Override
+    public float getMaxSpeedAirLateral() {
+        return 2f;
+    }
+
+    @Override
+    public float getMaxSpeedAirVertical() {
+        return 2f;
     }
 }

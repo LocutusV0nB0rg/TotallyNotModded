@@ -11,7 +11,7 @@ It is therefore recommended to create mod-exclusive worlds.
 
 3. Start the forge version WITHOUT the mod to make sure everything works fine. If so, close minecraft.
 
-4. Download the version of the mod you want to play with and put it in your %appdata%/.minecraft/mods directory.
+4. Download the version of the mod you want to play with and put it in your %appdata%/.minecraft/mods directory. You can find precompiled jars in the releases.
 
 5. Start the forge version again, this time, if you go to "Mods" in the main menu you should see that the "TotallyNotModded" mod has been added to forge.
 

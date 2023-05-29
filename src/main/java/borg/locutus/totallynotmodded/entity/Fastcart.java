@@ -55,10 +55,9 @@ public class Fastcart extends AbstractMinecart {
     }
 
     @Override
-    public Type getMinecartType() {
-        return null;
+    public @NotNull Type getMinecartType() {
+        return Type.RIDEABLE;
     }
-
 
     @Override
     public ItemStack getPickResult() {
@@ -66,32 +65,7 @@ public class Fastcart extends AbstractMinecart {
     }
 
     @Override
-    protected double getMaxSpeed() {
-        return 2f;
-    }
-
-    @Override
-    protected float getBlockSpeedFactor() {
-        return 2f;
-    }
-
-    @Override
-    public float getMaxCartSpeedOnRail() {
-        return 2f;
-    }
-
-    @Override
-    public float getCurrentCartSpeedCapOnRail() {
-        return 2f;
-    }
-
-    @Override
-    public float getMaxSpeedAirLateral() {
-        return 2f;
-    }
-
-    @Override
-    public float getMaxSpeedAirVertical() {
-        return 2f;
+    public double getMaxSpeedWithRail() {
+        return super.getMaxSpeedWithRail() * 1.5;
     }
 }

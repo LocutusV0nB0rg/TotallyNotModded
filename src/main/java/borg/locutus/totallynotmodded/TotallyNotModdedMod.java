@@ -1,6 +1,8 @@
 package borg.locutus.totallynotmodded;
 
 import borg.locutus.totallynotmodded.block.BlockInitializer;
+import borg.locutus.totallynotmodded.client.EntityRendererRegisterListener;
+import borg.locutus.totallynotmodded.entity.EntityRegisterListener;
 import borg.locutus.totallynotmodded.item.ItemInitializer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,6 +25,7 @@ public class TotallyNotModdedMod
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(CreativeTabCreator.class);
         MinecraftForge.EVENT_BUS.register(EntityRendererRegisterListener.class);
+        MinecraftForge.EVENT_BUS.register(EntityRegisterListener.class);
 
     }
 }
